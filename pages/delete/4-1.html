@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="4-1">
+        <article>
+            <h1 class="titulo">deleteMany()</h1>
+        </article>
+        <article>
+            <div>
+                <p>As operações de exclusão removem <a href="../introducao/0-2.html">documentos</a> existentes em uma <a href="../introducao/0-2.html">coleção</a>. Temos os seguintes métodos <code><a href="4-1.html">deleteOne()</a></code> e <code>deleteMany()</code>. Assim como os métodos de atualização, um remove um único documento, enquanto o outro remove vários.</p>
+
+                <p>O método <span class="destaque"><code>db.collection.deleteMany()</code></span> recebe parâmetros para encontrar os documentos que você deseja remover, e faz a exclusão de todos os registros que correspondem à consulta.</p>
+                
+                <h3>Sintaxe</h3>
+
+                <div class="codigo">
+                    <span class="linha-codigo">db.lutadores.deleteMany(</span>
+                    <span class="linha-codigo">    { <span class="bson_campo">nome</span>: <span class="bson_str">"José"</span> } </span>
+                    <span class="linha-codigo">);</span>
+                </div>
+
+                <p>O método <code>deleteMany</code> recebe um único parâmetro:</p>
+                
+                <p>A <span class="destaque">query</span> deve ser o parâmetro, ele será o filtro da sua exclusão. Ele pode ser um documento simples, como no exemplo acima, para pegar registros com a mesma correspondência nos campos especificados, mas também pode receber operadores lógicos, de comparação, de elementos, de avaliação e de matrizes. Deve ser informado entre chaves.</p>
+                <p class="destaque">Para excluir todos os documentos, basta passar a query como chaves vazias.</p>
+            </div>
+        </article>
+        <article>
+            <a class="button" href="4-2.html">Praticar</a>
+        </article>
+    </div>
+</body>
+</html>

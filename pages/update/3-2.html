@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../salvarEx.js" defer></script>
+    <script src="../../construtor.js" defer></script>
+    <script src="exercicios.js" defer></script>
+</head>
+<body>
+    <div id="3-2">
+        <article>
+            <h1 class="titulo">Exercícios</h1>
+        </article>
+        <article>
+            <div>
+                <h3>Contexto do Banco</h3>
+                
+                <p>Temos um banco chamado <Strong>dbEscola</Strong> contendo uma coleção de alunos com os seguintes campos:</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">alunos{</span>
+                    <span class="linha-codigo">   <span class="bson_campo">id</span>: <span class="bson_num">1</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">nome</span>: <span class="bson_str">"João"</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">idade</span>: <span class="bson_num">17</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">turma</span>: <span class="bson_str">"3A"</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">notas</span>: [<span class="bson_num">7.5</span>, <span class="bson_num">8.0</span>, <span class="bson_num">6.0</span>],</span>
+                    <span class="linha-codigo">   <span class="bson_campo">endereco</span>: {</span>
+                    <span class="linha-codigo">      <span class="bson_campo">rua</span>: <span class="bson_str">"Rua A"</span>,</span>
+                    <span class="linha-codigo">      <span class="bson_campo">numero</span>: <span class="bson_num">123</span>,</span>
+                    <span class="linha-codigo">      <span class="bson_campo">cidade</span>: <span class="bson_str">"São Paulo"</span></span>
+                    <span class="linha-codigo">   }</span>
+                    <span class="linha-codigo">}</span>
+    
+                </div>
+            </div>
+        </article>
+        <article id="ex1">
+            <div>
+                <h2>Exercícios com UpdateOne</h2>
+                <h4>Exercício  01</h4>
+
+                <p>Atualize a turma de um aluno específico. Atualize a turma do aluno cujo nome é <span class="destaque">"João"</span> para <span class="destaque">"3B"</span>.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">dbEscola.alunos.<input id="ex3.1.0" autocomplete="off">({</span>
+                    <span class="linha-codigo">    {<span class="bson_campo">nome</span>: <input id="ex3.1.1" autocomplete="off">},</span>
+                    <span class="linha-codigo">    { <span class="bson_op">$set</span>: {<span class="bson_campo">turma</span>: <input id="ex3.1.2" autocomplete="off">} },</span>
+                    <span class="linha-codigo">});</span>
+                </div>
+            </div>
+
+            <div>
+                <h4>Exercicio  02</h4>
+
+                <p>Adicione uma nota a um aluno específico. Adicione a nota <span class="destaque">9.0</span> ao array de notas do aluno com id <span class="destaque">1</span>. OBS: Para adicionar uma nota deve-se utilizar o operador <span class="bson_op">$push</span>.</p>
+
+                <div class="codigo">
+                    
+                    <span class="linha-codigo">dbEscola.alunos.<input id="ex3.2.0" autocomplete="off">({</span>
+                    <span class="linha-codigo">    {<input id="ex3.2.1" autocomplete="off">: <input id="ex3.2.2" autocomplete="off"/>},</span>
+                    <span class="linha-codigo">    { <input id="ex3.2.3" autocomplete="off">: {<input id="ex3.2.4" autocomplete="off">: <input id="ex3.2.5" autocomplete="off"/>} }</span>
+                    <span class="linha-codigo">});</span>
+                </div>
+            </div>
+        </article>
+        <article id="ex2">
+            <div>
+                <h2>Exercícios com UpdateMany</h2>
+                <h4>Exercício  01</h4>
+
+                <p>Atualize a cidade de todos os alunos de uma turma específica. Altere a cidade para <span class="destaque">"Rio de Janeiro"</span> para todos os alunos da turma <span class="destaque">"3A"</span>.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">dbEscola.alunos.<input id="ex3.3.0" autocomplete="off">({</span>
+                    <span class="linha-codigo">    {<span class="bson_campo">turma</span>: <input id="ex3.3.1" autocomplete="off">},</span>
+                    <span class="linha-codigo">    { <span class="bson_op">$set</span>: {<span class="bson_str">"endereco.cidade"</span>: <input id="ex3.3.2" autocomplete="off">} },</span>
+                    <span class="linha-codigo">});</span>
+                </div>
+            </div>
+
+            <div>
+                <h4>Exercicio  02</h4>
+
+                <p>Aumente a idade de todos os alunos em um ano. OBS: Para adicionar uma nota deve-se utilizar o operador <span class="bson_op">$inc</span>.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">dbEscola.alunos.<input id="ex3.4.0" autocomplete="off">({</span>
+                    <span class="linha-codigo">    <input id="ex3.4.1" autocomplete="off">,</span>
+                    <span class="linha-codigo">    { <input id="ex3.4.2" autocomplete="off">: {<input id="ex3.4.3" autocomplete="off">: <input id="ex3.4.4" autocomplete="off">} },</span>
+                    <span class="linha-codigo">});</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

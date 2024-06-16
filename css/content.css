@@ -1,0 +1,270 @@
+#content {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+#content ::selection {
+    background-color: #f0f0f0 !important;
+}
+
+#abrirMenu {
+    background-image: url("../images/miniMenu.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 22px;
+    left: 10px;
+}
+
+@media (min-width: 880px) {
+    #abrirMenu {
+        display: none;
+    }
+}
+
+.button {
+    width: 200px;
+    height: 80px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #00684A;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #00684bd3;
+}
+
+#area-info-carregamento {
+    margin: 20px auto;
+    width: 60%;
+}
+
+#barra-carregamento {
+    overflow: hidden;
+    background-color: #9f9e9e;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+#carregamento {
+    background-color: #00684A;
+    height: 100%;
+}
+
+#porc-carregamento {
+    text-align: center;
+}
+
+article {
+    display: flex;
+    padding: 40px 125px 40px 25px;
+    flex-direction: column;
+    max-width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+}
+
+@media (max-width: 1000px) {
+    article {
+        padding: 40px 25px;
+    }
+}
+
+.titulo{
+    font-size: 3.5em;
+}
+
+.destaque {
+    font-weight: bold;
+}
+
+.titulo, h2, h3, h4 {
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.img { 
+    align-self: center;
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+article p {
+    width: 100%;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.lista-conteudo {
+    list-style: none;
+}
+
+#nav {
+    display: flex;
+    font-size: 1.4em;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #00684A;
+    justify-content: space-between;
+    margin: 50px 40px 100px 40px;
+}
+
+.codigo {
+    display: block;
+    position: relative;
+    overflow-x: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: #00684A;
+    border-style: solid;
+    border-width: 1px 1px 1px 10px;
+    margin-bottom: 30px;
+} 
+
+.linha-codigo {
+    display: block;
+    max-width: 100%;
+    font-size: 1.2em;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1px 0;
+    
+}
+
+.bson_campo {
+    color: rgb(192, 74, 74);
+    font-weight: bold;
+}
+
+.bson_str, .bson_bool, .bson_num, .bson_op { font-weight: bold; }
+
+.bson_str {
+    color: #00684A;
+}
+
+.bson_bool {
+    color: #2c5fcc;
+}
+
+.bson_num {
+    color: #2ccccc;
+}
+
+.bson_op {
+    color: #cc992c;
+}
+
+.tabela {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+#input {
+    color: #00684A;
+}
+
+.errado{
+    color: red !important;
+}
+
+code {
+    font-weight: bold;
+}
+
+input { 
+    padding: 1px;
+}
+
+.input_medio {
+    width: 300px;
+}
+
+.input_grande {
+    width: 500px;
+}
+
+.copiar {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #00684A;
+    border-radius: 5px;
+    position: absolute;
+    padding: 2px;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.mensagem{
+    display:none;
+    position:absolute;
+    top: -50%;
+    left:0;
+    right:0;
+    margin: auto;
+    width:100px;
+    height:20px;
+    border:1px solid red;
+}
+
+.copiar:hover {
+    opacity: 70%;
+}
+
+.balaoEscondido {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-color: #00684A;
+  }
+  
+  

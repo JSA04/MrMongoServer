@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="2-2">
+        <article>
+            <h1 class="titulo">Operadores Lógicos</h1>
+        </article>
+        <article>
+            <p>Os operadores lógicos permitem combinar múltiplas condições em uma consulta. </p>
+        </article>
+        <article>
+            <h4>$and</h4>
+            <p>O operador <code>$and</code> retorna todos os documentos que satisfaçam todas as condições especificadas.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_op">$and</span>: [</span></span>
+                <span class="linha-codigo">    {<span class="bson_campo">idade</span>: {<span class="bson_op">$gt</span>: <span class="bson_num">18</span>}},</span></span>
+                <span class="linha-codigo">    {<span class="bson_campo">idade</span>: {<span class="bson_op">$lt</span>: <span class="bson_num">30</span>}}</span></span>
+                <span class="linha-codigo">]});</span></span>
+            </div>
+        </article>
+        <article>
+            <h4>$or</h4>
+            <p>O operador <code>$or</code> retorna todos os documentos que satisfaçam pelo menos uma das condições especificadas.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_op">$or</span>: [</span></span>
+                <span class="linha-codigo">    {<span class="bson_campo">nome</span>: <span class="bson_str">"Alice"</span>},</span></span>
+                <span class="linha-codigo">    {<span class="bson_campo">nome</span>: <span class="bson_str">"Bob"</span>}</span></span>
+                <span class="linha-codigo">]});</span></span>
+            </div>
+        </article>
+        <article>
+            <h4>$not</h4>
+            <p>O operador <code>$not</code> inverte o efeito de um operador de consulta e retorna documentos que não correspondem à condição especificada.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">idade</span>: {<span class="bson_op">$not</span>: {<span class="bson_op">$gt</span>: <span class="bson_num">30</span>}}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$nor</h4>
+            <p>O operador <code>$nor</code> retorna todos os documentos que falham em satisfazer todas as condições especificadas.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_op">$nor</span>: [</span></span>
+                <span class="linha-codigo">    {<span class="bson_campo">idade</span>: {<span class="bson_op">$gt</span>: <span class="bson_num">30</span>}},</span></span>
+                <span class="linha-codigo">    {<span class="bson_campo">nome</span>: <span class="bson_str">"Alice"</span>}</span></span>
+                <span class="linha-codigo">]});</span></span>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

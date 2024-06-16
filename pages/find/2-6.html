@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+    <script src="../../salvarEx.js" defer></script>
+    <script src="exercicios.js" defer></script>
+</head>
+<body>
+    <div id="2-6">
+        <article>
+            <h1 class="titulo">Exercicios</h1>
+            <p>Contexto do Banco: 
+                Temos um banco chamado dbMercado
+                Contendo a collection de produtos que contém os seguintes campos:
+                <div class="codigo">
+                    <span class="linha-codigo">produtos: {</span>
+                    <span class="linha-codigo">     <span class="bson_campo">id</span>: <span class="bson_num">1</span>,</span>
+                    <span class="linha-codigo">     <span class="bson_campo">nome</span>: <span class="bson_str">"Miojo"</span>,</span>
+                    <span class="linha-codigo">     <span class="bson_campo">descricao</span>: <span class="bson_str">"Este é um alimento usado pra quebrar aquele galho"</span>,</span>
+                    <span class="linha-codigo">     <span class="bson_campo">categoria</span>: <span class="bson_str">"Alimento Industrializado"</span></span>
+                    <span class="linha-codigo">     <span class="bson_campo">preco</span>: <span class="bson_num">3.85</span>,</span>
+                    <span class="linha-codigo">     <span class="bson_campo">dta_validade</span>: <span class="bson_str">"20/08/2025"</span>,</span>
+                    <span class="linha-codigo">     <span class="bson_campo">estoque</span>: <span class="bson_num">244</span></span>
+                    <span class="linha-codigo"> }</span>
+                </div>               
+                
+                </p>
+        </article>
+        <article id="ex1">
+            <div>
+                <h2>Exercicio  01</h2>
+
+                <p>Seguindo esse contexto quero que me mostre todos os documentos que tem o  nome igual a <span class="destaque">"Ketchup"</span>, faça mostrando apenas o nome, descrição e preco. </p>
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.1.0" autocomplete="off">({<input id="ex2.1.1" autocomplete="off"></input>})</span>
+                </div>
+            </div>
+        </article>
+        <article id="ex2">
+            <div>
+                <h2>Exercicio  02</h2>
+
+                <p>Agora mostre todos os documentos que não tem a categoria igual a <span class="destaque">"Limpeza"</span> </p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.2.0" autocomplete="off">({<input id="ex2.2.1" autocomplete="off"></input>})</span>
+                </div>
+            </div>
+        </article>
+        <article id="ex3">
+            <div>
+                <h2>Exercicio 03</h2>
+        
+                <p>Seguindo esse contexto quero que me mostre todos os documentos que tem o preco maior que <span class="destaque">20 reais</span>.</p>
+        
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.3.0" autocomplete="off">({<input id="ex2.3.1" autocomplete="off"></input>})</span>
+                </div>
+            </div>
+        </article>
+        <article id="ex4">
+            <div>
+                <h2>Exercicio 04</h2>
+
+                <p>Seguindo esse contexto quero que me mostre todos os documentos que tem o preco menor ou igual a <span class="destaque">30 reais</span>.</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.4.0" autocomplete="off">({<input id="ex2.4.1" autocomplete="off"></input>})</span>
+                </div>
+            </div>
+        </article>
+        <!-- Operadores Lógicos -->
+        <article>
+            <div>
+                <h2>Exercicio 05</h2>
+
+                <p>Seguindo esse contexto quero que me mostre todos os documentos que tem a data de validade dentro desse ano.</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.5.0" autocomplete="off">({</span>
+                    <span class="linha-codigo">     <input id="ex2.5.1" autocomplete="off"></input>: {</span>  
+                    <span class="linha-codigo">         <input id="ex2.5.2" autocomplete="off"></input>,</span>
+                    <span class="linha-codigo">         <input id="ex2.5.3" autocomplete="off"></input></span>
+                    <span class="linha-codigo">     }</span>                    
+                    <span class="linha-codigo">})</span>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2>Exercicio 06</h2>
+
+                <p>Agora mostre todos os documentos que tem a categoria sendo "Alimento Industrializado" ou "Alimento Fresco"</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.6.0" autocomplete="off">({</span>
+                    <span class="linha-codigo">     <input id="ex2.6.1" autocomplete="off"></input>: {</span>  
+                    <span class="linha-codigo">         <input id="ex2.6.2" autocomplete="off"></input></span>
+                    <span class="linha-codigo">     }</span>                    
+                    <span class="linha-codigo">})</span>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2>Exercicio 07</h2>
+
+                <p>Mostrar todos os documentos que têm o preço não sendo maior que 14.90 usando $not:</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.7.0" autocomplete="off">({</span>
+                    <span class="linha-codigo">     <input id="ex2.7.1" autocomplete="off"></input>: {</span>  
+                    <span class="linha-codigo">         <input id="ex2.7.2" autocomplete="off"></input></span>
+                    <span class="linha-codigo">     }</span>                    
+                    <span class="linha-codigo">})</span>
+                </div>
+            </div>
+        </article>
+        <!-- Operadores de Elementos -->
+        <article>
+            <div>
+                <h2>Exercicio 08</h2>
+
+                <p>Mostrar todos os documentos que têm o campo dta_validade:</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.8.0" autocomplete="off">({</span>
+                        <span class="linha-codigo">     <input id="ex2.8.1" autocomplete="off"></input>: {</span>  
+                        <span class="linha-codigo">         <input id="ex2.8.2" autocomplete="off"></input></span>
+                        <span class="linha-codigo">     }</span>                    
+                        <span class="linha-codigo">})</span>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2>Exercicio 09</h2>
+
+                <p>Mostrar o tipo de dado do campo dta_validade</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo"><input id="ex2.9.0" autocomplete="off"> dbMercado.produtos.<input id="ex2.9.1" autocomplete="off">({</span>
+                        <span class="linha-codigo">     <input id="ex2.9.2" autocomplete="off"></input>: {</span>  
+                        <span class="linha-codigo">         <input id="ex2.9.3" autocomplete="off"></input></span>
+                        <span class="linha-codigo">     }</span>                    
+                        <span class="linha-codigo">})<input id="ex2.9.4" autocomplete="off"> </span>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2>Exercicio 10</h2>
+
+                <p>Mostrar os documentos que têm o estoque menor que o preço usando $expr:</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo">dbMercado.produtos.<input id="ex2.10.0" autocomplete="off">({</span>
+                        <span class="linha-codigo">     <input id="ex2.10.1" autocomplete="off"></input>: {</span>  
+                        <span class="linha-codigo">         <input id="ex2.10.2" autocomplete="off"></input></span>
+                        <span class="linha-codigo">     }</span>                    
+                        <span class="linha-codigo">})</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

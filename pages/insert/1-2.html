@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+    <script src="../../salvarEx.js" defer></script>
+    <script src="exercicios.js" defer></script>
+</head>
+<body>
+    <div id="1-2">
+        <article>
+            <h1 class="titulo">Exercicios</h1>
+        </article>
+        <article id="ex1">
+            <div>
+                <h2>Exercicio  01</h2>
+
+                <p>Adicione um jogador com nome <span class="destaque">"Franco Pristaldo"</span>.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">db.jogadores.<input id="ex1.1.0" autocomplete="off">({</span>
+                    <span class="linha-codigo">    <span class="bson_campo">nome</span>: <input id="ex1.1.1" autocomplete="off"></input>,</span>
+                    <span class="linha-codigo">    <span class="bson_campo">idade</span>: <span class="bson_num">27</span>,</span>
+                    <span class="linha-codigo">    <span class="bson_campo">time</span>: <span class="bson_str">"Bremio"</span></span>
+                    <span class="linha-codigo">});</span>
+                </div>
+            </div>
+        </article>
+        <article id="ex2">
+            <div>
+                <h2>Exercicio  02</h2>
+
+                <p>Adicione dois jogadores, um com nome <span class="destaque">"Lucas Pitanga"</span> e o outro com <span class="destaque">36</span> no campo idade.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">db.jogadores.<input id="ex1.2.0" autocomplete="off">([</span>
+                    <span class="linha-codigo">    {</span>
+                    <span class="linha-codigo">        <span class="bson_campo">nome</span>: <input id="ex1.2.1" autocomplete="off"></input>,</span>
+                    <span class="linha-codigo">        <span class="bson_campo">idade</span>: <span class="bson_num">23</span>,</span>
+                    <span class="linha-codigo">        <span class="bson_campo">time</span>: <span class="bson_str">"Flasco"</span></span>
+                    <span class="linha-codigo">    }, {</span>
+                    <span class="linha-codigo">        <span class="bson_campo">nome</span>: <span class="bson_str">"Alfassio"</span>,</span>
+                    <span class="linha-codigo">        <span class="bson_campo">idade</span>: <input id="ex1.2.2" autocomplete="off"></input>,</span>
+                    <span class="linha-codigo">        <span class="bson_campo">time</span>: <span class="bson_str">"Cruzados"</span></span>
+                    <span class="linha-codigo">    }</span>
+                    <span class="linha-codigo">]);</span>
+                </div>
+            </div>
+        </article>
+        <article id="ex3">
+            <div>
+                <h2>Exercicio 03</h2>
+        
+                <p>Adicione um jogador que tem o campo nome igual a <span class="destaque">"Enner Falencia"</span>, idade igual a <span class="destaque">34</span> e o time igual <span class="destaque">"Nacional"</span>.</p>
+        
+                <div class="codigo">
+                    <span class="linha-codigo">db.jogadores.insertOne(</span>
+                    <span class="linha-codigo">    <input id="ex1.3.0" autocomplete="off" class="input_grande"></input></span>
+                    <span class="linha-codigo">);</span>
+                </div>
+            </div>
+        </article>
+        <article id="ex4">
+            <div>
+                <h2>Exercicio 04</h2>
+
+                <p>Adicione um subdocumento <span class="destaque">estatisticas</span>, contendo <span class="destaque">gols</span> e <span class="destaque">assistencias</span>, com os valores <span class="destaque">9</span> e <span class="destaque">5</span>, respectivamente.</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo">db.jogadores.insertOne(</span>
+                    <span class="linha-codigo">    <span class="bson_campo">nome</span>: <span class="bson_str">"Arrascaneta"</span>,</span>
+                    <span class="linha-codigo">    <span class="bson_campo">idade</span>: <span class="bson_num">27</span>,</span>
+                    <span class="linha-codigo">    <span class="bson_campo">time</span>: <span class="bson_str">"Flamingos"</span>,</span>
+                    <span class="linha-codigo">    <input id="ex1.4.0" autocomplete="off" class="input_medio"></input></span>
+                    <span class="linha-codigo">);</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

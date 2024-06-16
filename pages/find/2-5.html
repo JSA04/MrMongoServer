@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="2-5">
+        <article>
+            <h1 class="titulo">Operadores de Matrizes</h1>
+        </article>
+        <article>
+            <p>Os operadores de matrizes permitem realizar consultas baseadas em condições aplicadas a elementos dentro de matrizes.</p>
+        </article>
+        <article>
+            <h4>$all</h4>
+            <p>O operador <code>$all</code> verifica se todos os elementos especificados existem em uma matriz.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">tags</span>: {<span class="bson_op">$all</span>: [<span class="bson_str">"red"</span>, <span class="bson_str">"blue"</span>]}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$elemMatch</h4>
+            <p>O operador <code>$elemMatch</code> verifica se ao menos um elemento em uma matriz satisfaz uma condição especificada.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">scores</span>: {<span class="bson_op">$elemMatch</span>: {</span></span>
+                <span class="linha-codigo">    <span class="bson_campo">score</span>: {<span class="bson_op">$gt</span>: <span class="bson_num">80</span>},</span></span>
+                <span class="linha-codigo">    <span class="bson_campo">grade</span>: <span class="bson_str">"A"</span></span></span>
+                <span class="linha-codigo">}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$size</h4>
+            <p>O operador <code>$size</code> verifica se uma matriz tem um tamanho específico.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">tags</span>: {<span class="bson_op">$size</span>: <span class="bson_num">3</span>}});</span>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

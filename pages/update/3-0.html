@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="3-0">
+        <article>
+            <h1 class="titulo">updateOne()</h1>
+        </article>
+        <article>
+            <div>
+                <p>As operações de atualização modificam documentos existentes em uma coleção. Temos os seguintes métodos <code>updateOne()</code> e <code>updateMany()</code>. Assim com os métodos de inserir um atualiza um já o outro atualiza vários. </p>
+
+                <p>O método <code>db.collection.updateOne()</code> recebe parametros para encontrar o documento que você deseja alterar, e faz a modificação apenas no primeiro registro que encontra.</p>
+                
+                <h3>Sintaxe</h3>
+
+                <div class="codigo">
+                    <span class="linha-codigo">db.corredores.updateOne(</span>
+                    <span class="linha-codigo">    { <span class="bson_campo">nome</span>: <span class="bson_str">"Lewis"</span> }, </span>
+                    <span class="linha-codigo">    { <span class="bson_op">$set</span>: { <span class="bson_campo">equipe</span>: <span class="bson_str">"Scuderia Ferrari"</span> }} </span>
+                    <span class="linha-codigo">);</span>
+                </div>
+
+                <p>O método <code>updateOne</code> pode receber até dois parametros:</p>
+                
+                <p>A <span class="destaque">query</span> deve ser o primeiro parametro, ele será o filtro da sua alteração. Ele pode ser um documento simples, como no exemplo acima, para pegar registros com a mesma correspondencia nos campos especificados, mas também pode receber operadores lógicos, de comparação, de elementos, de avaliação e de matrizes. Deve ser informada entre chaves.</p>
+                <p>O <span class="destaque">update</span> é o segundo parâmetro, ele contará todas as modificações desejadas dentro do operador <code>$set</code>. Caso o campo a ser modificado não exista, ele é criado no documento.</p>
+            </div>
+        </article>
+        <article>
+            <a class="button" href="3-2.html#ex1">Praticar</a>
+        </article>
+    </div>
+</body>
+</html>

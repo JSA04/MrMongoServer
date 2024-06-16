@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../salvarEx.js" defer></script>
+    <script src="../../construtor.js" defer></script>
+    <script src="exercicios.js" defer></script>
+</head>
+<body>
+    <div id="4-2">
+        <article>
+            <h1 class="titulo">Exercícios</h1>
+        </article>
+        <article>
+            <div>
+                <h3>Contexto do Banco</h3>
+                
+                <p>Temos um banco chamado <Strong>dbAcademia</Strong> contendo uma coleção de alunos com os seguintes campos:</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">alunos{</span>
+                    <span class="linha-codigo">   <span class="bson_campo">id</span>: <span class="bson_num">1</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">nome</span>: <span class="bson_str">"Carlos Silva"</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">idade</span>: <span class="bson_num">25</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">plano</span>: <span class="bson_str">"Mensal"</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">atividades</span>: [<span class="bson_str">"Musculação"</span>, <span class="bson_str">"Crossfit"</span>],</span>
+                    <span class="linha-codigo">   <span class="bson_campo">mensalidadePaga</span>: <span class="bson_bool">true</span></span> 
+                    <span class="linha-codigo">}</span>
+    
+                </div>
+            </div>
+        </article>
+        <article id="ex1">
+            <div>
+                <h2>Exercícios com DeleteOne</h2>
+                <h4>Exercício  01</h4>
+
+                <p>Remova um aluno específico pelo nome. Remova o aluno cujo nome é <span class="destaque">"Carlos Silva"</span>.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">dbAcademia.alunos.<input id="ex4.1.0" autocomplete="off">(</span>
+                    <span class="linha-codigo">    {<span class="bson_campo">nome</span>: <input id="ex4.1.1" autocomplete="off">}</span>
+                    <span class="linha-codigo">);</span>
+                </div>
+            </div>
+
+            <div>
+                <h4>Exercicio  02</h4>
+
+                <p>Remova um aluno pelo ID. Remova o aluno com <span class="destaque">id 1</span>.</p>
+                
+                <div class="codigo">
+                    <span class="linha-codigo">dbAcademia.alunos.<input id="ex4.2.0" autocomplete="off">(</span>
+                    <span class="linha-codigo">    {<input id="ex4.2.1" autocomplete="off">: <input id="ex4.2.2" autocomplete="off">}</span>
+                    <span class="linha-codigo">);</span>
+                </div>
+            </div>
+        </article>
+        <article id="ex2">
+            <div>
+                <h2>Exercícios com DeleteMany</h2>
+                <h4>Exercício  01</h4>
+
+                <p>Remova todos os alunos com plano mensal. Remova todos os alunos que possuem o plano <span class="destaque">"Mensal"</span>.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">dbAcademia.alunos.<input id="ex4.3.0" autocomplete="off">(</span>
+                    <span class="linha-codigo">    {<input id="ex4.3.1" autocomplete="off">: <input id="ex4.3.2" autocomplete="off">}</span>
+                    <span class="linha-codigo">);</span>
+                </div>
+            </div>
+
+            <div>
+                <h4>Exercicio  02</h4>
+
+                <p>Remova todos os alunos que não pagaram a mensalidade. Remova todos os alunos cujo campo <span class="destaque">mensalidadePaga é false</span>.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">dbAcademia.alunos.<input id="ex4.4.0" autocomplete="off">(</span>
+                    <span class="linha-codigo">    {<input id="ex4.4.1" autocomplete="off">: <input id="ex4.4.2" autocomplete="off">}</span>
+                    <span class="linha-codigo">);</span>
+                </div>
+
+            </div>
+        </article>
+    </div>
+</body>
+</html>

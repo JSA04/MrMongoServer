@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="2-4">
+        <article>
+            <h1 class="titulo">Operadores de Avaliação</h1>
+        </article>
+        <article>
+            <p>Os operadores de avaliação permitem realizar consultas baseadas em expressões e padrões específicos.</p>
+        </article>
+        <article>
+            <h4>$expr</h4>
+            <p>O operador <code>$expr</code> permite a avaliação de expressões de agregação dentro da consulta.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_op">$expr</span>: {</span></span>
+                <span class="linha-codigo">    <span class="bson_op">$gt</span>: [<span class="bson_campo">"$vendas"</span>, <span class="bson_num">500</span>]</span></span>
+                <span class="linha-codigo">}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$regex</h4>
+            <p>O operador <code>$regex</code> permite realizar consultas baseadas em padrões de expressão regular.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">nome</span>: {<span class="bson_op">$regex</span>: <span class="bson_regex">/joão/i</span>}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$text</h4>
+            <p>O operador <code>$text</code> permite realizar pesquisas textuais em campos indexados para texto.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_op">$text</span>: {<span class="bson_op">$search</span>: <span class="bson_str">"mongo"</span>}});</span>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

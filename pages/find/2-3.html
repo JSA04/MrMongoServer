@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="2-3">
+        <article>
+            <h1 class="titulo">Operadores de Elementos</h1>
+        </article>
+        <article>
+            <p>Os operadores de elementos permitem fazer consultas baseadas na presença ou no tipo de um campo em documentos. </p>
+        </article>
+        <article>
+            <h4>$exists</h4>
+            <p>O operador <code>$exists</code> verifica a existência de um campo em um documento.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">email</span>: {<span class="bson_op">$exists</span>: <span class="bson_bool">true</span>}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$type</h4>
+            <p>O operador <code>$type</code> verifica o tipo de um campo em um documento. </p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">idade</span>: {<span class="bson_op">$type</span>: <span class="bson_str">"int"</span>}});</span>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

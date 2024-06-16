@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="1-1">
+        <article>
+            <h1 class="titulo">insertMany()</h1>
+        </article>
+        <article>
+            <div>
+                <p>As operações de criação ou inserção adicionam novos <a href="../introducao/0-3.html">documentos</a> a uma <a href="../introducao/0-2.html">coleção</a>. Se a coleção não existir no momento, as operações de inserção criarão a coleção. Os comandos para inserção são divididos em dois sendo eles o <code><a href="1-0.html">insertOne()</a></code> e o <code>insertMany()</code>.   </p>
+                <p>O comando <code>db.collection.insertMany()</code> recebe um array de documentos e insere todos de uma vez na collection especificada.</p>S
+                <h3>Sintaxe</h3>
+
+                <div class="codigo">
+                    <span class="linha-codigo">db.jogadores.insertMany(</span>
+                    <span class="linha-codigo">[</span>
+                    <span class="linha-codigo">    {</span>
+                    <span class="linha-codigo">       <span class="bson_campo">nome</span>: <span class="bson_str">"Jonathan Palleri"</span>,</span>
+                    <span class="linha-codigo">       <span class="bson_campo">idade</span>: <span class="bson_num">30,</span></span>
+                    <span class="linha-codigo">       <span class="bson_campo">time</span>: <span class="bson_str">"Santo Paulo"</span></span>
+                    <span class="linha-codigo">    }, </span>
+                    <span class="linha-codigo">    {</span>
+                    <span class="linha-codigo">       <span class="bson_campo">nome</span>: <span class="bson_str">"Angel Pomero"</span>,</span>
+                    <span class="linha-codigo">       <span class="bson_campo">idade</span>: <span class="bson_num">31,</span></span>
+                    <span class="linha-codigo">       <span class="bson_campo">time</span>: <span class="bson_str">"Cortinas"</span></span>
+                    <span class="linha-codigo">    },</span>
+                    <span class="linha-codigo">    {</span>
+                    <span class="linha-codigo">       <span class="bson_campo">nome</span>: <span class="bson_str">"Poão Paulo"</span>,</span>
+                    <span class="linha-codigo">       <span class="bson_campo">idade</span>: <span class="bson_num">28,</span></span>
+                    <span class="linha-codigo">       <span class="bson_campo">time</span>: <span class="bson_str">"Prantos"</span></span>
+                    <span class="linha-codigo">    },</span>
+                    <span class="linha-codigo">    {</span>
+                    <span class="linha-codigo">       <span class="bson_campo">nome</span>: <span class="bson_str">"Rafael Peiga"</span>,</span>
+                    <span class="linha-codigo">       <span class="bson_campo">idade</span>: <span class="bson_num">28,</span></span>
+                    <span class="linha-codigo">       <span class="bson_campo">time</span>: <span class="bson_str">"Parmeiras"</span></span>
+                    <span class="linha-codigo">    }</span>
+                    <span class="linha-codigo">]);</span>
+                </div>
+            </div>
+        </article>
+        <article>
+            <a class="button" href="1-2.html#ex2">Praticar</a>
+        </article>
+    </div>
+</body>
+</html>

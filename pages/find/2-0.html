@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="2-0">
+        <article>
+            <h1 class="titulo">find()</h1>
+        </article>
+        <article>
+            <div>
+                <p>O método <code>find</code> serve para consultar uma <a href="../introducao/0-2.html">coleção</a> com alguns critérios definidos, retornando uma lista com todos os <a href="../introducao/0-3.html">documentos</a> que se enquadram nos critérios. Utilizamos o código <code>db.collection.find()</code>.</p>
+
+                <div class="codigo">
+                    <span class="linha-codigo">db.collection.find({<span class="bson_campo">nome</span>: <span class="bson_str">"José"</span>}, {<span class="bson_campo">_id</span>: <span class="bson_num">0</span>, <span class="bson_campo">nome</span>: <span class="bson_num">1</span>, <span class="bson_campo">sobrenome</span>: <span class="bson_num">1</span>});</span>
+                    <br>
+                    resultado: 
+                    <span class="linha-codigo">[</span>
+                    <span class="linha-codigo">    {</span>
+                    <span class="linha-codigo">        <span class="bson_campo">nome</span>: <span class="bson_str">"José"</span>,</span>
+                    <span class="linha-codigo">        <span class="bson_campo">sobrenome</span>: <span class="bson_str">"Aldo"</span></span>
+                    <span class="linha-codigo">    },</span>
+                    <span class="linha-codigo">    {</span>
+                    <span class="linha-codigo">        <span class="bson_campo">nome</span>: <span class="bson_str">"José"</span>,</span>
+                    <span class="linha-codigo">        <span class="bson_campo">sobrenome</span>: <span class="bson_str">"Dias"</span></span>
+                    <span class="linha-codigo">    }</span>
+                    <span class="linha-codigo">]</span>
+                </div>
+
+                <p>O método <code>find</code> pode receber até dois parametros:</p>
+                
+                <p>A <span class="destaque">query</span> deve ser o primeiro parametro, ele será o filtro da sua consulta. Ele pode ser um documento simples, como no exemplo acima, para pegar registros com a mesma correspondencia nos campos especificados, mas também pode receber operadores lógicos, de comparação, de elementos, de avaliação e de matrizes. Deve ser informada entre chaves.</p>
+                <p>O <span class="destaque">projection</span> é o segundo parâmetro, ele serve pra omitir campos desnecessarios ou expor apenas os campos desejados. O valor <span class="destaque">0</span> omite um campo e o valor <span class="destaque">1</span> expõe. Assim como a <span class="destaque">query</span> ela deve ser informada entre chaves.</p>
+                <p class="destaque">Para pegar todos os documentos da collection, basta passar esses dois parametros em chaves vazias, ou simplesmente não passa nenhum parametro.</p>
+            </div>
+        </article>
+        <article>
+            <a class="button" href="2-6.html#ex1">Praticar</a>
+        </article>
+    </div>
+</body>
+</html>

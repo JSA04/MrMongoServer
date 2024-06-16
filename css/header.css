@@ -1,0 +1,23 @@
+
+
+#header {
+    display: flex;
+    align-items: center;
+    background-color: #00684A;
+    width: 100%;
+    min-height: 80px !important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#logo {
+    margin-left: 15px;
+    width: 150px;
+    height: 50%;
+    cursor: pointer;
+} 
+
+.botao {
+    cursor: pointer;
+}

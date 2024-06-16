@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="0-3">
+        <article>
+            <h1 class="titulo">Documentos</h1>
+        </article>
+        <article>
+            <div>
+                <p>O MongoDB armazena registros de dados como documentos BSON. BSON é uma representação binária de documentos JSON, embora contenha mais tipos de dados do que JSON.   </p>
+                
+                <h3>Sintaxe</h3>
+
+                <div class="codigo">
+                    <span class="linha-codigo">{</span>
+                    <span class="linha-codigo">   <span class="bson_campo">_id</span>: ObjectId(<span class="bson_str">"603k1f77bcaa6cd799fg901a")</span></span>
+                    <span class="linha-codigo">   <span class="bson_campo">nome</span>: <span class="bson_str">"Edops Toledo"</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">saldo</span>: <span class="bson_num">1780.39</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">data_nascimento</span>: ISODate(<span class="bson_str">"2008-02-20T20:14:14.796Z"</span>),</span>
+                    <span class="linha-codigo">   <span class="bson_campo">ativo</span>: <span class="bson_bool">true</span>,</span>
+                    <span class="linha-codigo">   <span class="bson_campo">categorias</span>: [<span class="bson_str">"Jogos"</span>, <span class="bson_str">"Futebol"</span>],</span>
+                    <span class="linha-codigo">   <span class="bson_campo">endereco</span>: {</span>
+                    <span class="linha-codigo">      <span class="bson_campo">logradouro</span>: <span class="bson_str">"Rua José Bicudo"</span>,</span>
+                    <span class="linha-codigo">      <span class="bson_campo">numero</span>: <span class="bson_num">123</span>,</span>
+                    <span class="linha-codigo">      <span class="bson_campo">bairro</span>: <span class="bson_str">"Osasco"</span>,</span>
+                    <span class="linha-codigo">      <span class="bson_campo">cidade</span>: <span class="bson_str">"São Paulo"</span>,</span>
+                    <span class="linha-codigo">      <span class="bson_campo">estado</span>: <span class="bson_str">"SP"</span></span>
+                    <span class="linha-codigo">   }</span>
+                    <span class="linha-codigo">}</span>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h3>Tipos de BSON</h3>
+            <div class="tabela">
+                <table>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td>ObjectId</td>
+                        <td>Um identificador único para documentos.</td>
+                        <td>ObjectId("603k1f77bcaa6cd799fg901a")</td>
+                    </tr>
+                    <tr>
+                        <td>String</td>
+                        <td>Uma sequência de caracteres de texto.</td>
+                        <td>"Edops Toledo"</td>
+                    </tr>
+                    <tr>
+                        <td>Double</td>
+                        <td>Número de ponto flutuante de 64 bits.</td>
+                        <td>1780.39</td>
+                    </tr>
+                    <tr>
+                        <td>ISODate</td>
+                        <td>Data em formato ISO-8601.</td>
+                        <td>ISODate("2008-02-20T20:14:14.796Z")</td>
+                    </tr>
+                    <tr>
+                        <td>Boolean</td>
+                        <td>Valor booleano (true ou false).</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>Array</td>
+                        <td>Uma lista de valores.</td>
+                        <td>["Jogos", "Futebol"]</td>
+                    </tr>
+                    <tr>
+                        <td>Document</td>
+                        <td>Um documento aninhado (subdocumento).</td>
+                        <td>{"logradouro": "Rua José Bicudo", "numero": 123, "bairro": "Osasco", "cidade": "São Paulo", "estado": "SP"}</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../construtor.js" defer></script>
+</head>
+<body>
+    <div id="2-1">
+        <article>
+            <h1 class="titulo">Operadores de Comparação</h1>
+        </article>
+        <article>
+            <p>Os operadores de comparação permitem filtrar documentos em uma coleção com base em condições específicas. </p>
+        </article>
+        <article>
+            <h4>$eq</h4>
+            <p>O operador <code>$eq</code> encontra todos os documentos que tenham um valor especifico, no campo especificado. </p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">nome</span>: {<span class="bson_op">$eq</span>: <span class="bson_str">"João"</span>}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$ne</h4>
+            <p>Já o operador <code>$ne</code> encontra todos os documentos que NÃO contenham um valor especifico, no campo especificado. </p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">nome</span>: {<span class="bson_op">$ne</span>: <span class="bson_str">"Pablo"</span>}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$gt</h4>
+            <p>O operador <code>$gt</code> encontra todos os documentos que tenham um valor, de um campo especifico, maior que um valor especificado. </p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">idade</span>: {<span class="bson_op">$gt</span>: <span class="bson_num">60</span>}});</span>
+            </div>
+
+            <h4>$gte</h4>
+            <p>O <code>gte</code> tem comportamento semelhante ao <code>gt</code>, pois também encontra os documentos que possuem o valor de um campo específico maior que um número especificado, mas também inclue este número na consulta. </p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">idade</span>: {<span class="bson_op">$gte</span>: <span class="bson_num">60</span>}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$lt</h4>
+            <p>O operador <code>$lt</code> encontra todos os documentos que tenham um valor, de um campo especifico, menor que um valor especificado. </p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">idade</span>: {<span class="bson_op">$lt</span>: <span class="bson_num">18</span>}});</span>
+            </div>
+
+            <h4>$lte</h4>
+            <p>O <code>lte</code> tem comportamento semelhante ao <code>lt</code>, pois também encontra os documentos que possuem o valor de um campo específico menor que um número especificado, mas também inclue este número na consulta. </p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">idade</span>: {<span class="bson_op">$lte</span>: <span class="bson_num">18</span>}});</span>
+            </div>
+        </article>
+        <article>
+            <h4>$in</h4>
+            <p>O operador <code>$in</code> encontra documentos em que campos possuem valores que está presente em um array especificado.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">idade</span>: {<span class="bson_op">$in</span>: [<span class="bson_num">20</span>, <span class="bson_num">25</span>, <span class="bson_num">30</span>]}});</span>
+            </div>
+
+            <h4>$nin</h4>
+            <p>O operador <code>$nin</code> encontra documentos em que campos possuem valores que NÃO está presente em um array especificado.</p>
+            <div class="codigo">
+                <span class="linha-codigo">db.collection.find({<span class="bson_campo">idade</span>: {<span class="bson_op">$nin</span>: [<span class="bson_num">20</span>, <span class="bson_num">25</span>, <span class="bson_num">30</span>]}});</span>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
